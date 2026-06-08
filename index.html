@@ -133,7 +133,7 @@
 
         .hero-text-container {
             width: 100%;
-            max-width: 1300px; /* Aligns with the wider hero container */
+            max-width: 1180px; /* Aligns with the updated hero banner container */
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -206,40 +206,58 @@
         /* Stretched wrapper for wide viewports to push form card to far right */
         .hero-banner-container {
             width: 100%;
-            max-width: 1300px; /* Increased to push form to far right */
+            max-width: 1180px; /* Reduced from 1300px to narrow the layout and reduce side space */
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: stretch; 
             position: relative;
             z-index: 2;
-            gap: 40px;
+            gap: 24px; /* Reduced from 40px to bring form and couple closer */
         }
 
         /* Left Column: Image container - Stretched to fill parent height */
         .hero-image-col {
-            flex: 1.1;
+            flex: 1.15; /* Increased from 1.05 to give more horizontal space and prevent any edge cropping */
             display: flex;
             align-items: flex-end; 
             justify-content: center;
             overflow: hidden;
             align-self: stretch; 
+            position: relative; /* Position relative for the glow element */
+        }
+
+        /* Warm brand-color radial gradient glow behind the couple to fill visual space */
+        .couple-glow-bg {
+            position: absolute;
+            bottom: -30px;
+            left: 44%; /* Adjusted glow position to match the couple's balanced alignment */
+            transform: translateX(-50%);
+            width: 85%;
+            height: 85%;
+            background: radial-gradient(circle, rgba(142, 12, 27, 0.09) 0%, rgba(255, 204, 0, 0.05) 50%, rgba(255, 255, 255, 0) 75%);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(8px);
         }
 
         .hero-image-col img {
             height: 100%;
             width: 100%;
             object-fit: cover; 
-            object-position: center bottom;
+            object-position: 62% bottom; /* Shifted from 72% to 62% to bring the groom's right hand fully into view */
             display: block; 
+            position: relative;
+            z-index: 1; /* Renders in front of glow background */
         }
 
         /* Right Column: Form wrapper */
         .hero-form-col {
-            flex: 0.9;
+            flex: 0.85; /* Balanced column ratio to allow a clean form width without page overflow */
             display: flex;
             align-items: center;
-            justify-content: flex-end; /* Pushes form to far right of column */
+            justify-content: flex-start; /* Aligned to start to move the form card closer to the couple */
             padding: 30px 0;
         }
 
@@ -247,13 +265,13 @@
         .hero-form-card {
             background-color: #ffffff;
             width: 100%;
-            max-width: 440px; /* Capped width, fluid below 440px */
+            max-width: 580px; /* Slightly decreased from 660px to keep the layout balanced and responsive */
             border-radius: 16px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-            padding: 26px 28px;
+            padding: 32px 38px; /* Balanced padding for the 580px card size */
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 15px;
         }
 
         .form-heading {
@@ -928,6 +946,7 @@
         <div class="hero-banner-container">
             <!-- Left Column: Couple Image -->
             <div class="hero-image-col">
+                <div class="couple-glow-bg"></div>
                 <img src="south_indian_couple.png" alt="South Indian Bride and Groom in Traditional Attire">
             </div>
 
