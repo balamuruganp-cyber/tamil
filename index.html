@@ -87,40 +87,13 @@
         .co-brand-container {
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
-        .co-brand-swoosh {
-            width: 20px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .co-brand-swoosh img {
-            width: 100%;
-            height: 100%;
+        .co-brand-logo-img {
+            height: 48px; /* Increased from 38px for better visibility */
+            width: auto;
             object-fit: contain;
-        }
-
-        .co-brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .co-brand-label {
-            font-size: 10px;
-            font-weight: 500;
-            color: var(--light-red);
-            line-height: 1.2;
-        }
-
-        .co-brand-name {
-            font-size: 12px;
-            font-weight: 800;
-            color: var(--dark-grey);
-            line-height: 1.2;
+            display: block;
         }
 
         /* Header Right */
@@ -741,21 +714,33 @@
         @media (max-width: 600px) {
             header {
                 height: auto;
-                padding: 12px 20px;
+                padding: 10px 12px; /* Tight padding to maximize horizontal space */
                 flex-direction: row; 
                 justify-content: space-between;
                 align-items: center;
-                gap: 10px;
             }
-            .vertical-divider, .co-brand-container {
+            .header-left {
+                display: flex;
+                flex-direction: row; /* Keep logos side-by-side as requested */
+                align-items: center;
+                gap: 8px; /* Tight horizontal gap to prevent overflow */
+            }
+            .vertical-divider {
                 display: none; 
             }
+            .co-brand-container {
+                display: flex;
+                align-items: center;
+            }
+            .co-brand-logo-img {
+                height: 30px; /* Optimized height to be clear and fit on all screens */
+            }
             .logo-img {
-                height: 38px; 
+                height: 34px; /* Proportional height matching co-brand logo */
             }
             .login-btn {
-                padding: 8px 18px;
-                font-size: 14px;
+                padding: 6px 12px; /* Tight padding to save space on mobile */
+                font-size: 13px; /* Clean size */
             }
             .hero-text-section {
                 padding: 20px 15px 15px 15px;
@@ -913,14 +898,7 @@
 
             <!-- Kalyan Jewellers Badge -->
             <div class="co-brand-container">
-                <div class="co-brand-swoosh">
-                    <!-- Kalyan Jewellers Yellow Swoosh Logo Image -->
-                    <img src="icon1.png" alt="Kalyan Jewellers Ribbon">
-                </div>
-                <div class="co-brand-text">
-                    <span class="co-brand-label">From the Trusted Brand</span>
-                    <span class="co-brand-name">Kalyan Jewellers</span>
-                </div>
+                <img src="kalyan_jewellers_logo.png" alt="From the Trusted Brand Kalyan Jewellers" class="co-brand-logo-img">
             </div>
         </div>
 
