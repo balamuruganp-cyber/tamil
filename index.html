@@ -279,6 +279,8 @@
             font-weight: 700;
             color: var(--dark-grey);
             margin-bottom: 2px;
+            text-align: center; /* Center align the form heading */
+            line-height: 1.4; /* Better spacing for two lines */
         }
 
         .form-heading span.red-text {
@@ -953,7 +955,7 @@
             <!-- Right Column: Registration Form Column -->
             <div class="hero-form-col">
                 <div class="hero-form-card">
-                    <h2 class="form-heading"><span class="red-text">We Match Better</span> - Find Your Best Match</h2>
+                    <h2 class="form-heading"><span class="red-text">We Match Better</span><br>Start Finding Your Best Match</h2>
                     
                     <form id="regForm" onsubmit="event.preventDefault(); alert('Registration submitted!');">
                         <!-- Dropdown: Registering For -->
@@ -1013,7 +1015,6 @@
 
                     <!-- Advisor Contact Section -->
                     <div class="advisor-box">
-                        <div class="advisor-title">Prefer a personal touch?</div>
                         <button class="advisor-btn" onclick="alert('Requesting callback...')">
                             <!-- Headphone Icon SVG -->
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
