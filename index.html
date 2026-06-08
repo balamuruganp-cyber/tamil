@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <script>
+        document.documentElement.classList.remove('no-js');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalyan Matrimony - Duplicate Clone</title>
+    <meta name="description" content="Duplicate replica of Kalyan Matrimony home page. Find your best life partner.">
+    <!-- Google Fonts for premium typography and Tamil support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS reset & variables */
+        :root {
+            --primary-red: #8e0c1b;
+            --primary-red-hover: #720914;
+            --light-red: #b30b22;
+            --gold: #ffcc00;
+            --gold-hover: #e6b800;
+            --dark-grey: #222222;
+            --medium-grey: #666666;
+            --light-grey: #cccccc;
+            --bg-cream: #fff9f5;
+            --border-cream: #c99b9b;
+            --font-family-english: 'Outfit', sans-serif;
+            --font-family-tamil: 'Noto Sans Tamil', 'Outfit', sans-serif;
+            --hero-bg-color: #f6ebd9; /* Exact matches the background color of the new patterned couple image */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-english);
+            color: var(--dark-grey);
+            background-color: #fcfcfc;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Main Logo Image */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Divider */
+        .vertical-divider {
+            height: 40px;
+            width: 1px;
+            background-color: #e0e0e0;
+        }
+
+        /* Co-branding badge */
+        .co-brand-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .co-brand-swoosh {
+            width: 20px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .co-brand-swoosh img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .co-brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .co-brand-label {
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--light-red);
+            line-height: 1.2;
+        }
+
+        .co-brand-name {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--dark-grey);
+            line-height: 1.2;
+        }
+
+        /* Header Right */
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .login-btn {
+            background-color: var(--light-red);
+            color: #ffffff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: var(--primary-red-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(179, 11, 34, 0.25);
+        }
+
+        /* Hero Text Section (Below navigation, above banner) - Pattern background */
+        .hero-text-section {
+            background-color: var(--hero-bg-color); 
+            background-image: url('pattern_bg.png'); /* Pattern wallpaper background */
+            background-repeat: repeat;
+            background-size: 380px auto; /* Elegant pattern scale */
+            padding: 24px 20px 0px 20px; 
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-text-container {
+            width: 100%;
+            max-width: 1300px; /* Aligns with the wider hero container */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            text-align: center; 
+        }
+
+        .pill-label {
+            background-color: #3f3531;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            display: inline-block;
+        }
+
+        .headline-en {
+            font-size: 26px;
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--dark-grey);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .headline-en .red-brand {
+            color: var(--light-red);
+        }
+
+        .headline-ta {
+            font-family: var(--font-family-tamil);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: var(--dark-grey);
+        }
+
+        .headline-ta .red-brand {
+            color: var(--light-red);
+        }
+
+        /* Hero Banner Section (Couple Image + Form Card side-by-side) - Pattern background */
+        .hero-banner-section {
+            position: relative;
+            background-color: var(--hero-bg-color); 
+            background-image: url('pattern_bg.png'); /* Pattern wallpaper background */
+            background-repeat: repeat;
+            background-size: 380px auto; /* Exact same pattern scale for seamless blend */
+            display: flex;
+            align-items: stretch;
+            padding: 0 40px; /* Vertical padding removed so image is flush with bottom border */
+            overflow: hidden;
+        }
+
+        /* Subtle overlay to ensure readability */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Stretched wrapper for wide viewports to push form card to far right */
+        .hero-banner-container {
+            width: 100%;
+            max-width: 1300px; /* Increased to push form to far right */
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; 
+            position: relative;
+            z-index: 2;
+            gap: 40px;
+        }
+
+        /* Left Column: Image container - Stretched to fill parent height */
+        .hero-image-col {
+            flex: 1.1;
+            display: flex;
+            align-items: flex-end; 
+            justify-content: center;
+            overflow: hidden;
+            align-self: stretch; 
+        }
+
+        .hero-image-col img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; 
+            object-position: center bottom;
+            display: block; 
+        }
+
+        /* Right Column: Form wrapper */
+        .hero-form-col {
+            flex: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Pushes form to far right of column */
+            padding: 30px 0;
+        }
+
+        /* Right Content: Registration Form Card - Fluid and Responsive width */
+        .hero-form-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 440px; /* Capped width, fluid below 440px */
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            padding: 26px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-heading {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--dark-grey);
+            margin-bottom: 2px;
+        }
+
+        .form-heading span.red-text {
+            color: var(--light-red);
+        }
+
+        .form-group {
+            position: relative;
+            width: 100%;
+        }
+
+        /* Input Styles */
+        .input-style {
+            width: 100%;
+            height: 46px;
+            border: 1px solid #d2d2d2;
+            border-radius: 6px;
+            padding: 0 16px;
+            font-size: 15px;
+            font-family: var(--font-family-english);
+            color: var(--dark-grey);
+            background-color: #ffffff;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-style:focus {
+            border-color: var(--light-red);
+            box-shadow: 0 0 0 3px rgba(179, 11, 34, 0.1);
+        }
+
+        /* Select custom arrow styling */
+        select.input-style {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+            padding-right: 40px;
+            cursor: pointer;
+        }
+
+        select.input-style:invalid,
+        select.input-style option[value=""][disabled] {
+            color: #757575;
+        }
+
+        /* Phone Row Layout */
+        .phone-group {
+            display: flex;
+            gap: 0;
+            border: 1px solid #d2d2d2;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .phone-group:focus-within {
+            border-color: var(--light-red);
+            box-shadow: 0 0 0 3px rgba(179, 11, 34, 0.1);
+        }
+
+        .country-select {
+            width: 95px;
+            height: 44px;
+            background-color: #f5f5f5;
+            border: none;
+            border-right: 1px solid #d2d2d2;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0 10px 0 12px;
+            color: #333333;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .phone-input {
+            flex: 1;
+            height: 44px;
+            border: none;
+            padding: 0 16px;
+            font-size: 15px;
+            outline: none;
+            font-family: var(--font-family-english);
+            min-width: 0; /* Prevents flex overflow */
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            height: 48px;
+            background-color: var(--primary-red);
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2px;
+            letter-spacing: 0.2px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-red-hover);
+            box-shadow: 0 5px 15px rgba(142, 12, 27, 0.3);
+        }
+
+        /* Divider Row */
+        .divider-row {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #999999;
+            font-size: 11px;
+            font-weight: 700;
+            margin: 2px 0;
+        }
+
+        .divider-row::before,
+        .divider-row::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .divider-row:not(:empty)::before {
+            margin-right: 12px;
+        }
+
+        .divider-row:not(:empty)::after {
+            margin-left: 12px;
+        }
+
+        /* Advisor Assistance Box */
+        .advisor-box {
+            border: 1px solid var(--border-cream);
+            background-color: var(--bg-cream);
+            border-radius: 8px;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .advisor-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #5a4b41;
+            margin-bottom: 8px;
+        }
+
+        .advisor-btn {
+            width: 100%;
+            height: 42px;
+            background-color: var(--gold);
+            color: #111111;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .advisor-btn:hover {
+            background-color: var(--gold-hover);
+            box-shadow: 0 4px 12px rgba(255, 204, 0, 0.25);
+        }
+
+        .advisor-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: #111111;
+        }
+
+        .advisor-subtext {
+            font-size: 11px;
+            color: var(--medium-grey);
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        /* Why Choose Section - Reduced gaps */
+        .why-choose-section {
+            background-color: #ffffff;
+            padding: 45px 30px; /* Reduced vertical gap */
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #222222;
+            margin-bottom: 30px; /* Reduced gap */
+            letter-spacing: -0.5px;
+        }
+
+        .section-title span.red-text {
+            color: var(--light-red);
+        }
+
+        /* Desktop benefits grid layout (4 columns) */
+        .why-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px 24px;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-align: left;
+            flex-direction: row;
+            padding: 10px;
+            border-radius: 12px;
+            background-color: transparent;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+        }
+
+        .why-item:hover {
+            background-color: #fbf6f0;
+            transform: translateY(-4px);
+        }
+
+        .why-icon {
+            width: 52px;
+            height: 52px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .why-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .why-item:hover .why-icon img {
+            transform: scale(1.18) rotate(6deg);
+        }
+
+        .why-text {
+            font-size: 14px;
+            font-weight: 700;
+            color: #222222;
+            line-height: 1.35;
+            transition: color 0.3s ease;
+        }
+
+        .why-item:hover .why-text {
+            color: var(--light-red);
+        }
+
+        /* Testimonials Section - Reduced gaps */
+        .testimonials-section {
+            background-color: #fffdf5;
+            padding: 50px 30px 55px 30px; /* Reduced gaps */
+            text-align: center;
+            border-top: 1px solid rgba(224, 214, 204, 0.3);
+        }
+
+        .testimonials-subtitle {
+            font-size: 14px;
+            color: var(--medium-grey);
+            max-width: 700px;
+            margin: -15px auto 45px auto; /* Reduced gaps */
+            line-height: 1.5;
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 45px 24px 30px 24px;
+            position: relative;
+            box-shadow: 0 12px 35px rgba(184, 142, 115, 0.07);
+            border: 1px solid rgba(224, 214, 204, 0.45);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 380px; /* Capped card width for better proportion on mobile */
+            margin: 0 auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(184, 142, 115, 0.12);
+        }
+
+        .avatar-badge {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .avatar-badge.gold {
+            background-color: #c69a30;
+        }
+
+        .avatar-badge.purple {
+            background-color: #7058d7;
+        }
+
+        .avatar-badge.red {
+            background-color: #eb3b4d;
+        }
+
+        .testimonial-card .name {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--dark-grey);
+            margin-bottom: 4px;
+        }
+
+        .testimonial-card .stars {
+            color: #ffb400;
+            font-size: 15px;
+            margin-bottom: 14px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-card .quote {
+            font-size: 13.5px;
+            color: #555555;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #5a030d;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-text {
+            color: #ffffff;
+            font-size: 17px; /* Increased font size for better readability */
+            line-height: 1.7; /* Adjusted line-height for better readability */
+            max-width: 950px; /* Slightly widened max-width for larger font */
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        /* Mobile Responsiveness Improvements */
+        @media (max-width: 1024px) {
+            header {
+                padding: 0 24px;
+            }
+            .hero-banner-container {
+                gap: 20px;
+            }
+            /* Tablet layout for benefits grid - centered, 2 in a row */
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px 20px;
+            }
+            .why-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                gap: 12px;
+            }
+            .why-icon {
+                width: 58px;
+                height: 58px;
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 45px 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner-section {
+                padding: 0 20px;
+                min-height: auto;
+            }
+            .hero-banner-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+            }
+            .hero-image-col {
+                width: 100%;
+                height: 280px; 
+                flex: none;
+            }
+            .hero-image-col img {
+                object-fit: contain; 
+                object-position: center bottom;
+            }
+            .hero-form-col {
+                width: 100%;
+                justify-content: center;
+                padding: 10px 0 30px 0;
+                flex: none;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                height: auto;
+                padding: 12px 20px;
+                flex-direction: row; 
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
+            .vertical-divider, .co-brand-container {
+                display: none; 
+            }
+            .logo-img {
+                height: 38px; 
+            }
+            .login-btn {
+                padding: 8px 18px;
+                font-size: 14px;
+            }
+            .hero-text-section {
+                padding: 20px 15px 15px 15px;
+                background-size: 260px auto; /* Slightly smaller repeating pattern on small screen */
+            }
+            .headline-en {
+                font-size: 20px;
+            }
+            .headline-ta {
+                font-size: 15px;
+            }
+            .hero-banner-section {
+                padding: 0 15px;
+                background-size: 260px auto; /* Smaller pattern for mobile banner */
+            }
+            .hero-image-col {
+                height: 220px; 
+            }
+            
+            /* Responsive Form Card fix for all mobile viewports */
+            .hero-form-card {
+                width: 100%;
+                max-width: 100%; /* Spans 100% of container viewport width safely */
+                margin: 0 auto;
+                padding: 20px 22px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            }
+            
+            /* Mobile view benefits grid */
+            .why-choose-section {
+                padding: 35px 15px;
+            }
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 30px 12px; 
+            }
+            .why-item {
+                flex-direction: column; 
+                align-items: center;    
+                text-align: center;     
+                gap: 10px;              
+            }
+            .why-icon {
+                width: 54px;
+                height: 54px;
+            }
+            .why-text {
+                font-size: 13px; 
+                line-height: 1.3;
+            }
+            
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 24px;
+            }
+            .testimonials-section {
+                padding: 40px 20px 45px 20px;
+            }
+            .testimonials-subtitle {
+                margin-bottom: 40px;
+            }
+            footer {
+                padding: 25px 15px;
+            }
+            .footer-text {
+                font-size: 15px; /* Increased footer text size on mobile phones */
+            }
+        }
+
+        /* Page Load & Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply Page Load Animations */
+        header {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hero-text-container {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation-delay: 0.15s;
+        }
+
+        .hero-image-col {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation-delay: 0.35s;
+        }
+
+        .hero-form-col {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation-delay: 0.55s;
+        }
+
+        /* Scroll Animations with Intersection Observer */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                        transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            will-change: opacity, transform;
+        }
+
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered transition delays */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+        .delay-6 { transition-delay: 0.6s; }
+        .delay-7 { transition-delay: 0.7s; }
+        .delay-8 { transition-delay: 0.8s; }
+
+        /* Fallback for environments with JavaScript disabled */
+        .no-js .scroll-animate {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-left">
+            <!-- Main Kalyan Matrimony Logo -->
+            <a href="#" class="logo-container" aria-label="Kalyan Matrimony Home">
+                <img src="logo.png" alt="Kalyan Matrimony Logo" class="logo-img">
+            </a>
+
+            <!-- Divider -->
+            <div class="vertical-divider"></div>
+
+            <!-- Kalyan Jewellers Badge -->
+            <div class="co-brand-container">
+                <div class="co-brand-swoosh">
+                    <!-- Kalyan Jewellers Yellow Swoosh Logo Image -->
+                    <img src="icon1.png" alt="Kalyan Jewellers Ribbon">
+                </div>
+                <div class="co-brand-text">
+                    <span class="co-brand-label">From the Trusted Brand</span>
+                    <span class="co-brand-name">Kalyan Jewellers</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <button class="login-btn" onclick="alert('Login Clicked')">Login</button>
+        </div>
+    </header>
+
+    <!-- Hero Text Section (Center-aligned above the hero banner) -->
+    <section class="hero-text-section">
+        <div class="hero-text-container">
+            <div class="pill-label">Matrimony For Tamil</div>
+            
+            <h1 class="headline-en">
+                GET YOUR BEST LIFE PARTNER ON <span class="red-brand">KALYAN MATRIMONY</span>
+            </h1>
+            
+            <p class="headline-ta">
+                உங்களுக்கு சிறந்த வாழ்க்கை துணை அமைய <span class="red-brand">கல்யாண் மேட்ரிமோனியில்</span> பதிவு செய்யுங்கள்.
+            </p>
+        </div>
+    </section>
+
+    <!-- Hero Banner Section (Couple Image + Form Card side-by-side) -->
+    <section class="hero-banner-section" aria-label="Matrimony Registration Banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-banner-container">
+            <!-- Left Column: Couple Image -->
+            <div class="hero-image-col">
+                <img src="south_indian_couple.jpg" alt="South Indian Bride and Groom in Traditional Attire">
+            </div>
+
+            <!-- Right Column: Registration Form Column -->
+            <div class="hero-form-col">
+                <div class="hero-form-card">
+                    <h2 class="form-heading"><span class="red-text">We Match Better</span> - Find Your Best Match</h2>
+                    
+                    <form id="regForm" onsubmit="event.preventDefault(); alert('Registration submitted!');">
+                        <!-- Dropdown: Registering For -->
+                        <div class="form-group" style="margin-bottom: 14px;">
+                            <select class="input-style" id="registeringFor" required>
+                                <option value="" disabled selected hidden>Registering For</option>
+                                <option value="Myself">Self</option>
+                                <option value="Son">Son</option>
+                                <option value="Daughter">Daughter</option>
+                                <option value="Brother">Brother</option>
+                                <option value="Sister">Sister</option>
+                                <option value="Relative">Relative</option>
+                                <option value="Friend">Friend</option>
+                            </select>
+                        </div>
+
+                        <!-- Input: Full Name -->
+                        <div class="form-group" style="margin-bottom: 14px;">
+                            <input type="text" class="input-style" id="fullName" placeholder="Enter Full Name" required>
+                        </div>
+
+                        <!-- Input Group: Country Code + Phone -->
+                        <div class="form-group" style="margin-bottom: 14px;">
+                            <div class="phone-group">
+                                <select class="country-select" id="countryCode">
+                                    <option value="+91">+91, Ind</option>
+                                    <option value="+1">+1, USA</option>
+                                    <option value="+44">+44, UK</option>
+                                    <option value="+971">+971, UAE</option>
+                                    <option value="+65">+65, SGP</option>
+                                    <option value="+60">+60, MYS</option>
+                                </select>
+                                <input type="tel" class="phone-input" id="mobileNumber" placeholder="Mobile Number" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown: Mother Tongue -->
+                        <div class="form-group" style="margin-bottom: 14px;">
+                            <select class="input-style" id="motherTongue" required>
+                                <option value="" disabled selected hidden>Select Mother Tongue</option>
+                                <option value="Tamil">Tamil</option>
+                                <option value="Telugu">Telugu</option>
+                                <option value="Malayalam">Malayalam</option>
+                                <option value="Kannada">Kannada</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Gujarati">Gujarati</option>
+                                <option value="Marathi">Marathi</option>
+                            </select>
+                        </div>
+
+                        <!-- Button: Continue Registration -->
+                        <button type="submit" class="submit-btn">Continue Registration</button>
+                    </form>
+
+                    <!-- Divider -->
+                    <div class="divider-row">OR</div>
+
+                    <!-- Advisor Contact Section -->
+                    <div class="advisor-box">
+                        <div class="advisor-title">Prefer a personal touch?</div>
+                        <button class="advisor-btn" onclick="alert('Requesting callback...')">
+                            <!-- Headphone Icon SVG -->
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12v7c0 1.1.9 2 2 2h3v-8H4v-1c0-4.41 3.59-8 8-8s8 3.59 8 8v1h-3v8h3c1.1 0 2-.9 2-2v-7c0-5.52-4.48-10-10-10z"/>
+                            </svg>
+                            Get a Call from Our Advisor
+                        </button>
+                        <div class="advisor-subtext">
+                            Personal assistance for you or your family member's registration.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-section" aria-label="Why Choose Kalyan Matrimony">
+        <h2 class="section-title scroll-animate">Why Choose <span class="red-text">Kalyan Matrimony</span></h2>
+        
+        <div class="why-grid">
+            <!-- Item 1: Kalyan Jewellers Brand (icon1.png) -->
+            <div class="why-item scroll-animate delay-1">
+                <div class="why-icon">
+                    <img src="icon1.png" alt="From the trusted Brand Kalyan Jewelers">
+                </div>
+                <span class="why-text">From the trusted Brand<br>Kalyan Jewelers</span>
+            </div>
+
+            <!-- Item 2: 100% verified (icon2.png) -->
+            <div class="why-item scroll-animate delay-2">
+                <div class="why-icon">
+                    <img src="icon2.png" alt="100% contact verified">
+                </div>
+                <span class="why-text">100% contact<br>verified</span>
+            </div>
+
+            <!-- Item 3: New profiles daily (icon3.png) -->
+            <div class="why-item scroll-animate delay-3">
+                <div class="why-icon">
+                    <img src="icon3.png" alt="New profiles updated daily">
+                </div>
+                <span class="why-text">New profiles<br>updated daily</span>
+            </div>
+
+            <!-- Item 4: Parent to Parent (icon4.png) -->
+            <div class="why-item scroll-animate delay-4">
+                <div class="why-icon">
+                    <img src="icon4.png" alt="Parent to Parent contactable">
+                </div>
+                <span class="why-text">Parent to Parent<br>contactable</span>
+            </div>
+
+            <!-- Item 5: Easy search & shortlist (icon5.png) -->
+            <div class="why-item scroll-animate delay-5">
+                <div class="why-icon">
+                    <img src="icon5.png" alt="Easy to search & shortlist profiles">
+                </div>
+                <span class="why-text">Easy to search &<br>shortlist profiles</span>
+            </div>
+
+            <!-- Item 6: Chat Interface (icon6.png) -->
+            <div class="why-item scroll-animate delay-6">
+                <div class="why-icon">
+                    <img src="icon6.png" alt="Simplified chat interface">
+                </div>
+                <span class="why-text">Simplified chat<br>interface</span>
+            </div>
+
+            <!-- Item 7: One time payment (icon7.png) -->
+            <div class="why-item scroll-animate delay-7">
+                <div class="why-icon">
+                    <img src="icon7.png" alt="One time payment - Unlimited Subscription">
+                </div>
+                <span class="why-text">One time payment -<br>Unlimited Subscription</span>
+            </div>
+
+            <!-- Item 8: AI Matchmaking (icon8.png) -->
+            <div class="why-item scroll-animate delay-8">
+                <div class="why-icon">
+                    <img src="icon8.png" alt="AI-Based intelligent matchmaking">
+                </div>
+                <span class="why-text">AI-Based intelligent<br>matchmaking</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" aria-label="What Our Customers Say">
+        <h2 class="section-title scroll-animate">What Our <span class="red-text">Customers Say</span></h2>
+        <p class="testimonials-subtitle scroll-animate delay-1">
+            Hear from our customers who trust us for a seamless and reliable experience. <br>
+            Their stories reflect our commitment to service, transparency, and care.
+        </p>
+
+        <div class="testimonials-grid">
+            <!-- Card 1: Ashok Kumar -->
+            <div class="testimonial-card scroll-animate delay-2">
+                <div class="avatar-badge gold">A</div>
+                <h3 class="name">Ashok Kumar</h3>
+                <div class="stars">★★★★★</div>
+                <p class="quote">
+                    Your service is very good, and the customer support is also excellent. Likewise, your application is very user-friendly.
+                </p>
+            </div>
+
+            <!-- Card 2: Hari Haran -->
+            <div class="testimonial-card scroll-animate delay-3">
+                <div class="avatar-badge purple">H</div>
+                <h3 class="name">Hari Haran</h3>
+                <div class="stars">★★★★★</div>
+                <p class="quote">
+                    I found life partner to my daughter. Highly recommended for anyone looking for a serious relationship. Thanks to Kalyan Matrimony.
+                </p>
+            </div>
+
+            <!-- Card 3: Arun Kumar -->
+            <div class="testimonial-card scroll-animate delay-4">
+                <div class="avatar-badge red">A</div>
+                <h3 class="name">Arun Kumar</h3>
+                <div class="stars">★★★★★</div>
+                <p class="quote">
+                    I have started browsing the app. The service persons are attentive to our queries. Overall good service.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="footer-text">
+            Kalyan Matrimony is a trusted matrimonial service designed for those seeking a lifelong marriage. This is not a dating website. All profiles should reflect genuine marriage intentions. Copyright &copy; 2025 Kalyan Matrimony. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Intersection Observer Script for Scroll Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px 0px -50px 0px", // Triggers slightly before entering the viewport fully
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animateElements = document.querySelectorAll(".scroll-animate");
+            animateElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
